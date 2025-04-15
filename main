@@ -1,0 +1,121 @@
+📁 memory-book
+├── index.html
+├── style.css
+├── script.js
+├── audio
+│   └── background.mp3
+└── images
+    ├── photo1.jpg
+    ├── photo2.jpg
+    └── ... (up to as many as you want)
+
+---
+
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Book</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="audio/background.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="book">
+    <div class="page" id="page1">
+      <div class="content">
+        <h2>Welcome, Mama</h2>
+        <p>This is our story...</p>
+        <div class="images">
+          <img src="images/photo1.jpg" alt="Memory 1">
+          <img src="images/photo2.jpg" alt="Memory 2">
+        </div>
+        <p class="caption">Our very first memories together.</p>
+      </div>
+    </div>
+    <!-- More pages... -->
+    <div class="page" id="page15">
+      <div class="content">
+        <h2>To Mama, with love</h2>
+        <p class="letter">
+          Every laugh, every tear, every moment — etched in my soul. Thank you for being my first home, my eternal peace.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+---
+
+/* style.css */
+body {
+  font-family: 'Shadows Into Light', cursive;
+  background-color: #fdf6e3;
+  margin: 0;
+  padding: 0;
+}
+
+.book {
+  width: 90%;
+  max-width: 800px;
+  margin: 2rem auto;
+  background: white;
+  border: 2px solid #ccc;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 2rem;
+  overflow-x: auto;
+}
+
+.page {
+  margin-bottom: 3rem;
+  border-bottom: 1px dashed #aaa;
+  padding-bottom: 2rem;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.images img {
+  width: 48%;
+  border: 1px solid #999;
+  border-radius: 10px;
+}
+
+.caption {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.letter {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .images img {
+    width: 100%;
+  }
+}
+
+---
+
+// script.js
+// Optional: Add page navigation or animations
+// For now, we’ll keep it simple as a scrollable memory book.
+
+// Later you can enhance it with JavaScript if you want to add flipping animations or page buttons.
